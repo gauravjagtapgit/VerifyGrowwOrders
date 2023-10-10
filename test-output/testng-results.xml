@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-09T01:57:26 IST" name="Suite" finished-at="2023-10-09T01:57:42 IST" duration-ms="16420">
+    <groups>
+    </groups>
+    <test started-at="2023-10-09T01:57:26 IST" name="Test" finished-at="2023-10-09T01:57:42 IST" duration-ms="16420">
+      <class name="Test.VerifyUserCanLogin">
+        <test-method is-config="true" signature="beforclass(java.lang.String)[pri:0, instance:Test.VerifyUserCanLogin@235834f2]" started-at="2023-10-09T01:57:26 IST" name="beforclass" finished-at="2023-10-09T01:57:34 IST" duration-ms="8068" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforclass -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:Test.VerifyUserCanLogin@235834f2]" started-at="2023-10-09T01:57:34 IST" name="beforemethod" finished-at="2023-10-09T01:57:34 IST" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="VerifyUserCanLogin()[pri:0, instance:Test.VerifyUserCanLogin@235834f2]" started-at="2023-10-09T01:57:34 IST" name="VerifyUserCanLogin" finished-at="2023-10-09T01:57:41 IST" duration-ms="7347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUserCanLogin -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Test.VerifyUserCanLogin@235834f2]" started-at="2023-10-09T01:57:41 IST" name="afterMethod" finished-at="2023-10-09T01:57:41 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyUserCanLogin status=SUCCESS method=VerifyUserCanLogin.VerifyUserCanLogin()[pri:0, instance:Test.VerifyUserCanLogin@235834f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Test.VerifyUserCanLogin@235834f2]" started-at="2023-10-09T01:57:41 IST" name="afterClass" finished-at="2023-10-09T01:57:42 IST" duration-ms="816" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Test.VerifyUserCanLogin -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

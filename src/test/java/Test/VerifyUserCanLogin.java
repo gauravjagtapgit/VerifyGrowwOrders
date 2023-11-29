@@ -20,6 +20,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import Base.BaseClass;
+import POM.BuyZomatoStockLimitPriceNSEOrder;
 import POM.LoginPage;
 import Utility.UtilityForScreenshots;
 
@@ -28,6 +29,8 @@ public class VerifyUserCanLogin{
 	WebDriver driver;
 	
 	LoginPage lp;
+	
+	BuyZomatoStockLimitPriceNSEOrder buystock;
 	
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports reports;
@@ -49,6 +52,7 @@ public class VerifyUserCanLogin{
 	@BeforeMethod
 	public void beforemethod() {
 	 lp =new LoginPage(driver);
+	 buystock = new BuyZomatoStockLimitPriceNSEOrder(driver);
 	}
 	
 	@Test
@@ -58,6 +62,16 @@ public class VerifyUserCanLogin{
 		lp.ContinueBtn();
 		lp.EnterPassword();
 		lp.Submit();
+		
+		 // Pause for manual OTP entry
+        String otp = lp.waitForOTPInput();
+        
+     // Pause for manual PIN entry
+        String pin = lp.waitForPINInput();
+        
+     // Enter OTP and PIN into the web page
+        lp.enterOTP(otp);
+        lp.enterPIN(pin);
 		
 		String expectedURL = "https://groww.in/";
         String actualURL = driver.getCurrentUrl();

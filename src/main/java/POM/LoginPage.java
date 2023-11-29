@@ -10,8 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import Utility.UtilityClassForProperties;
 import Utility.UtilityClassForWaits;
 
-
-
+import java.util.Scanner;
 public class LoginPage {
 	
 	WebDriver driver;
@@ -30,6 +29,12 @@ public class LoginPage {
     
     @FindBy(xpath = "//span[text()='Submit']")
     private WebElement AgainClick;
+    
+    @FindBy(xpath = "(//input[@autocomplete='new-password'])[1]")
+    private WebElement PINInputElement;
+    
+    @FindBy(xpath = "(//input[@autocomplete='new-password'])[1]")
+    private WebElement OTPInputElement;
 	
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
@@ -66,6 +71,27 @@ public class LoginPage {
 		WebElement submit = UtilityClassForWaits.WaitForVisiblityofElement(driver,AgainClick);
 		submit.click();
 	}
-	
+	public String waitForOTPInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter OTP: ");
+        return scanner.nextLine();
+    }
+	// Add this method for manual PIN entry
+    public String waitForPINInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter PIN: ");
+        return scanner.nextLine();
+    }
 
+    // Updated method to enter OTP
+    public void enterOTP(String otp) {
+    	
+        UtilityClassForWaits.WaitForVisiblityofElement(driver, OTPInputElement).sendKeys(otp);
+    }
+
+    // Updated method to enter PIN
+    public void enterPIN(String pin) {
+        UtilityClassForWaits.WaitForVisiblityofElement(driver, PINInputElement).sendKeys(pin);
+    }
+    
 }

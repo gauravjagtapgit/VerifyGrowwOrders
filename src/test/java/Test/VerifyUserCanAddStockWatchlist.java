@@ -20,7 +20,6 @@ public class VerifyUserCanAddStockWatchlist {
 	
 	@BeforeClass
 	@Parameters("browser")
-	//public void beforclass(String browser) throws IOException {
 	public void beforeClass(@Optional("chrome") String browser) throws IOException {
 		
    driver =	BaseClass.getdriver(browser);	

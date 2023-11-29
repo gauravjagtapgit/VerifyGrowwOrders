@@ -23,5 +23,7 @@ public class UtilityClassForWaits {
 		WebDriverWait	wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		 return  wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	}
+	
+	 
 
 }

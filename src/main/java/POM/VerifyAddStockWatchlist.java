@@ -26,6 +26,7 @@ public class VerifyAddStockWatchlist {
 	}
 	
 	public void SelectNewWachlist() {
+		
 		WebElement ClickOnBtn = UtilityClassForWaits.WaitForVisiblityofElement(driver,CreatNewWachlist);
 		ClickOnBtn.click();
 		Reporter.log("click on creat new chatchlist button");

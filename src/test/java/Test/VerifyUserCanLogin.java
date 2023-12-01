@@ -22,6 +22,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import Base.BaseClass;
 import POM.BuyZomatoStockLimitPriceNSEOrder;
 import POM.LoginPage;
+import POM.SellZomatoStockLimitPriceNSEOrder;
 import Utility.UtilityForScreenshots;
 
 public class VerifyUserCanLogin{
@@ -35,10 +36,10 @@ public class VerifyUserCanLogin{
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports reports;
 	ExtentTest test;
+	SellZomatoStockLimitPriceNSEOrder sp;
 	
 	@BeforeClass
 	@Parameters("browser")
-	//public void beforclass(String browser) throws IOException {
 	public void beforeClass(@Optional("chrome") String browser) throws IOException {
 		
 		htmlReporter = new ExtentHtmlReporter("ExtentReports.html");
@@ -53,6 +54,7 @@ public class VerifyUserCanLogin{
 	public void beforemethod() {
 	 lp =new LoginPage(driver);
 	 buystock = new BuyZomatoStockLimitPriceNSEOrder(driver);
+	 sp = new SellZomatoStockLimitPriceNSEOrder(driver);
 	}
 	
 	@Test

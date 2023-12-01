@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -48,5 +49,9 @@ public class VerifyBuyZomatoStockDeliveryOrderNSE {
 		
 		 WebElement confirmationMessage = driver.findElement(By.id("confirmationMessage")); // Replace with actual ID
 	        Assert.assertTrue(confirmationMessage.isDisplayed(), "Buy stock confirmation message is displayed");
+	}
+	@AfterClass
+	public void teardown() {
+		driver.close();
 	}
 }

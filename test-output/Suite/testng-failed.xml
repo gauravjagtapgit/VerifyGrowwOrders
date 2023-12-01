@@ -11,15 +11,23 @@
           <include name="beforemethod"/>
         </methods>
       </class> <!-- Test.VerifyUserCanAddStockWatchlist -->
-      <class name="Test.VerifyUserCanLogin">
+      <class name="Test.VerifyBuyZomatoStockDeliveryOrderNSE">
         <methods>
-          <include name="afterMethod"/>
-          <include name="VerifyUserCanLogin"/>
-          <include name="afterClass"/>
-          <include name="beforemethod"/>
-          <include name="beforeClass"/>
+          <include name="BuyStockInLimitPrice"/>
+          <include name="teardown"/>
+          <include name="VerifyZomatoStockserch"/>
+          <include name="beformethod"/>
+          <include name="beforclass"/>
         </methods>
-      </class> <!-- Test.VerifyUserCanLogin -->
+      </class> <!-- Test.VerifyBuyZomatoStockDeliveryOrderNSE -->
+      <class name="Test.VerifySellZomatoStockDeliveryOrderNSEWithStockNotBuy">
+        <methods>
+          <include name="testSellZomatoStock"/>
+          <include name="BeforMethod"/>
+          <include name="teardown"/>
+          <include name="beforemethod"/>
+        </methods>
+      </class> <!-- Test.VerifySellZomatoStockDeliveryOrderNSEWithStockNotBuy -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

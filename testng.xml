@@ -6,6 +6,7 @@
     <classes>
       <class name="Test.VerifyUserCanLogin"/>
        <class name="Test.VerifyBuyZomatoStockDeliveryOrderNSE"/>
+       <class name="Test.VerifySellZomatoStockDeliveryOrderNSEWithStockNotBuy"/>
       <class name="Test.VerifyUserCanAddStockWatchlist"/>
     </classes>
   </test> <!-- Test -->

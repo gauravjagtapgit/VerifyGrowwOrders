@@ -16,13 +16,13 @@ public class SellZomatoStockLimitPriceNSEOrder {
 	private WebElement SerchBox;
 	
 	@FindBy(xpath = "//div[text()='SELL']")
-	private WebElement SellOption;
+	public WebElement SellOption;
 	
 	@FindBy(css = "#inputShare")
-	private WebElement QatyForNSE;
+	public WebElement QatyForNSE;
 	
 	@FindBy(css = "#limitPriceInput")
-	private WebElement LimitPrice;
+	public WebElement LimitPrice;
 	
 	@FindBy(css = "//div[text()='0 shares are available to sell']")
 	private WebElement ShowMessage;
@@ -52,11 +52,9 @@ public class SellZomatoStockLimitPriceNSEOrder {
 		LimitPrice.sendKeys("50");
 	}
 	
-	public void StockNotAvailable() {
-		ShowMessage.isDisplayed();
+	public boolean StockNotAvailable() {
+	    return ShowMessage.isDisplayed();
 	}
-	
-	
-	
+
 
 }
